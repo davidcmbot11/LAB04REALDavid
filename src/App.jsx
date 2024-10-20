@@ -1,13 +1,15 @@
 import './App.css'
-import { Button } from './componets/Button'
+import { CompWithProps } from './componets/CompWithProps';
 function App() {
 
-  const buttonText = "Count : ";
+  const user = "User : ";
 
   return (
     <>
-      <h1>Incrementar y Decrementar con Números Random</h1>
-      <Button text = {buttonText} />
+      <div >
+        <h1>Componente con Props</h1>
+        <CompWithProps user={user} />
+      </div>
     </>
   )
 }
