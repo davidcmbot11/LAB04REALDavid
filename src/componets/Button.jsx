@@ -3,15 +3,20 @@ import { useState } from "react";
 export const Button  = props => {
    const {text} = props;
    const[count, setCount] = useState(0);
-   function handlerButton (){
+   const handleIncrement = () => {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    setCount(count + randomNumber);
+  };
 
-        const randomNumber = Math.floor(Math.random()*100) + 1;
-        alert(`Valor Aleatorio: ${randomNumber}`);
-        setCount(randomNumber)
-   }
+  const handleDecrement = () => {
+    const randomNumber = Math.floor(Math.random() * 100) + 1;
+    setCount(count - randomNumber);
+  };
     return (
-        <button onClick={handlerButton}>
-        {text} { count }
-        </button>
+    <div>
+        <button onClick={handleIncrement}>Incrementar</button>
+        <button onClick={handleDecrement}>Decrementar</button>
+        <h2>{text} {count}</h2>
+    </div>
     )
 };
