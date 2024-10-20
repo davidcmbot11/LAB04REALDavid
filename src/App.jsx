@@ -1,13 +1,15 @@
 import './App.css'
-import { WapperList } from './componets/WrapperList';
-import { List } from './componets/List';
-
+import { CompWithProps } from './componets/CompWithProps';
 function App() {
+
+  const user = "User : ";
+
   return (
     <>
-      <WapperList>
-       <List/> 
-      </WapperList>
+      <div >
+        <h1>Componente con Props</h1>
+        <CompWithProps user={user} />
+      </div>
     </>
   )
 }
