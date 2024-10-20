@@ -1,13 +1,13 @@
 import './App.css'
-import { WapperList } from './componets/WrapperList';
-import { List } from './componets/List';
-
+import { Button } from './componets/Button'
 function App() {
+
+  const buttonText = "Count : ";
+
   return (
     <>
-      <WapperList>
-       <List/> 
-      </WapperList>
+      <h1>Incrementar y Decrementar con Números Random</h1>
+      <Button text = {buttonText} />
     </>
   )
 }
